@@ -79,7 +79,8 @@ export default class Rcon {
         steamID: match[2],
         name: match[3],
         teamID: match[4],
-        squadID: match[5] !== 'N/A' ? match[5] : null
+        squadID: match[5] !== 'N/A' ? match[5] : null,
+        timeout: 0
       });
     }
 
@@ -92,6 +93,10 @@ export default class Rcon {
 
   async warn(steamID, message) {
     await this.execute(`AdminWarn "${steamID}" ${message}`);
+  }
+
+  async kick(steamID, message) {
+    await this.execute(`AdminKick "${steamID}" ${message}`);
   }
 
   /* Core socket functionality */

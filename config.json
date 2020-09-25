@@ -62,6 +62,15 @@
   },
   "plugins": [
     {
+      "plugin": "auto-afk-kick",
+      "enabled": true
+      "warnMessage": "Please join a squad or be kicked for being AFK."
+      "kickMessage": "Kicked for being AFK."
+      "playerThreshold": 70
+      "warnThreshold": 2
+      "kickThreshold": 5
+    },
+    {
       "plugin": "auto-tk-warn",
       "enabled": true,
       "message": "Please apologise for ALL TKs in ALL chat!"
